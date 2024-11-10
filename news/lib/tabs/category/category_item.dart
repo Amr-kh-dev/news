@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:news/app_theme.dart';
-import 'package:news/category_model.dart';
-import 'package:news/item_card.dart';
+import 'package:news/models/category_model.dart';
+import 'package:news/tabs/category/item_card.dart';
 
 class CategoryItem extends StatelessWidget {
   List<CategoryModel> items = [
       CategoryModel(
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+    
           image: 'assets/image/sports.png',
           id: '')
         ,
@@ -16,7 +16,7 @@ class CategoryItem extends StatelessWidget {
       
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+      
           image: 'assets/image/sports.png',
           id: '',
     ),
@@ -24,7 +24,7 @@ class CategoryItem extends StatelessWidget {
       
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+    
           image: 'assets/image/sports.png',
           id: '',
     ),
@@ -32,7 +32,7 @@ class CategoryItem extends StatelessWidget {
       
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+   
           image: 'assets/image/sports.png',
           id: '',
     ),
@@ -40,7 +40,7 @@ class CategoryItem extends StatelessWidget {
       
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+        
           image: 'assets/image/sports.png',
           id: '',
     ),
@@ -48,7 +48,7 @@ class CategoryItem extends StatelessWidget {
       
           color: AppTheme.red,
           name: 'sport',
-          index: 0,
+         
           image: 'assets/image/sports.png',
           id: '',
     ),
