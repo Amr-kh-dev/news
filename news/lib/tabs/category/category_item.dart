@@ -54,6 +54,8 @@ class CategoryItem extends StatelessWidget {
     ),
   ];
 
+  CategoryItem({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:news/app_theme.dart';
 import 'package:news/models/category_model.dart';
 
 class ItemCard extends StatelessWidget {
   CategoryModel model;
   int index;
-  ItemCard({Key? key, required this.model,required this.index}) : super(key: key);
+  ItemCard({super.key, required this.model,required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 12),
+      margin: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
           color: model.color,
           borderRadius: 
