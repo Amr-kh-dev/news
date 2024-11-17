@@ -18,18 +18,23 @@ class AppTheme {
         backgroundColor: AppTheme.primary,
         centerTitle: true,
         foregroundColor: wihte,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: wihte,
           fontSize: 22,
           fontWeight: FontWeight.w400,
         ),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
       ),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         titleLarge: TextStyle(
           color: Colors.white,
           fontSize: 22,
           fontWeight: FontWeight.w700,
+        ),
+        titleSmall: TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+          color: AppTheme.primary,
         )
       ));
   static ThemeData darkTheme = ThemeData();

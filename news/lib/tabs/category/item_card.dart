@@ -14,8 +14,8 @@ class ItemCard extends StatelessWidget {
           color: model.color,
           borderRadius: 
                BorderRadius.only(
-                  topLeft: Radius.circular(25),
-                  topRight: Radius.circular(25),
+                  topLeft: const Radius.circular(25),
+                  topRight: const Radius.circular(25),
                   bottomLeft: Radius.circular(index.isEven? 25:0),
                   bottomRight: Radius.circular(index.isOdd? 25:0),
                 )),

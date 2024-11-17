@@ -3,7 +3,7 @@ import 'package:news/app_theme.dart';
 import 'package:news/tabs/home_screen.dart';
 
 void main() {
-  runApp(newsApp());
+  runApp(const newsApp());
 }
 
 class newsApp extends StatelessWidget {

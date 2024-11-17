@@ -4,6 +4,7 @@ import 'package:news/models/category_model.dart';
 import 'package:news/tabs/category/item_card.dart';
 
 class CategoryItem extends StatelessWidget {
+  
   List<CategoryModel> items = [
       CategoryModel(
           color: AppTheme.red,
@@ -53,8 +54,9 @@ class CategoryItem extends StatelessWidget {
           id: '',
     ),
   ];
+  void Function(CategoryModel) oncategorieSelected;
 
-  CategoryItem({super.key});
+  CategoryItem({super.key,  required this.oncategorieSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -65,14 +67,16 @@ class CategoryItem extends StatelessWidget {
                 .textTheme
                 .titleLarge
                 ?.copyWith(color: AppTheme.black)),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Expanded(
           child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisSpacing: 10, childAspectRatio: 1.0),
-            itemBuilder: (context, index) => ItemCard(model: items[index], index: index),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () { oncategorieSelected(items[index]);},
+              child: ItemCard(model: items[index], index: index)),
             itemCount: items.length,
           ),
         )

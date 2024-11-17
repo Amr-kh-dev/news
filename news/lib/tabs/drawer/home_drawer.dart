@@ -3,7 +3,7 @@ import 'package:news/app_theme.dart';
 
 class HomeDrawer extends StatelessWidget {
   void Function(OncategorieSelected) onTap;
-  HomeDrawer({required this.onTap});
+  HomeDrawer({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +33,8 @@ class HomeDrawer extends StatelessWidget {
                       onTap: ()=>onTap(OncategorieSelected.categories),
                       child: Row(
                         children: [
-                          Icon(Icons.menu),
-                          SizedBox(
+                          const Icon(Icons.menu),
+                          const SizedBox(
                             width: 3,
                           ),
                           Text(
@@ -51,8 +51,8 @@ class HomeDrawer extends StatelessWidget {
                       onTap: ()=> onTap(OncategorieSelected.settings),
                       child: Row(
                         children: [
-                          Icon(Icons.settings),
-                          SizedBox(
+                          const Icon(Icons.settings),
+                          const SizedBox(
                             width: 3,
                           ),
                           Text('settings',
