@@ -4,59 +4,47 @@ import 'package:news/models/category_model.dart';
 import 'package:news/tabs/category/item_card.dart';
 
 class CategoryItem extends StatelessWidget {
-  
   List<CategoryModel> items = [
-      CategoryModel(
-          color: AppTheme.red,
-          name: 'sport',
-    
-          image: 'assets/image/sports.png',
-          id: '')
-        ,
-   CategoryModel(
-      
-          color: AppTheme.red,
-          name: 'sport',
-      
-          image: 'assets/image/sports.png',
-          id: '',
+    CategoryModel(
+        color: AppTheme.red,
+        name: 'sport',
+        image: 'assets/image/sports.png',
+        id: ''),
+    CategoryModel(
+      color: AppTheme.red,
+      name: 'sport',
+      image: 'assets/image/sports.png',
+      id: '',
     ),
     CategoryModel(
-      
-          color: AppTheme.red,
-          name: 'sport',
-    
-          image: 'assets/image/sports.png',
-          id: '',
+      color: AppTheme.red,
+      name: 'sport',
+      image: 'assets/image/sports.png',
+      id: '',
     ),
     CategoryModel(
-      
-          color: AppTheme.red,
-          name: 'sport',
-   
-          image: 'assets/image/sports.png',
-          id: '',
+      color: AppTheme.red,
+      name: 'sport',
+      image: 'assets/image/sports.png',
+      id: '',
     ),
     CategoryModel(
-      
-          color: AppTheme.red,
-          name: 'sport',
-        
-          image: 'assets/image/sports.png',
-          id: '',
+      color: AppTheme.red,
+      name: 'sport',
+      image: 'assets/image/sports.png',
+      id: '',
     ),
     CategoryModel(
-      
-          color: AppTheme.red,
-          name: 'sport',
-         
-          image: 'assets/image/sports.png',
-          id: '',
+      color: AppTheme.red,
+      name: 'sport',
+      image: 'assets/image/sports.png',
+      id: '',
     ),
   ];
-  void Function(CategoryModel) oncategorieSelected;
 
-  CategoryItem({super.key,  required this.oncategorieSelected});
+  void Function(CategoryModel) onSelcetedCategory;
+
+  CategoryItem({super.key, required this.onSelcetedCategory});
 
   @override
   Widget build(BuildContext context) {
@@ -75,8 +63,10 @@ class CategoryItem extends StatelessWidget {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisSpacing: 10, childAspectRatio: 1.0),
             itemBuilder: (context, index) => GestureDetector(
-              onTap: () { oncategorieSelected(items[index]);},
-              child: ItemCard(model: items[index], index: index)),
+                onTap: () {
+                  onSelcetedCategory(items[index]);
+                },
+                child: ItemCard(model: items[index], index: index)),
             itemCount: items.length,
           ),
         )

@@ -26,16 +26,10 @@ class AppTheme {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
       ),
       textTheme: const TextTheme(
-        titleLarge: TextStyle(
-          color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.w700,
-        ),
-        titleSmall: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 14,
-          color: AppTheme.primary,
-        )
-      ));
+          titleLarge: TextStyle(
+        color: Colors.white,
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
+      )));
   static ThemeData darkTheme = ThemeData();
 }

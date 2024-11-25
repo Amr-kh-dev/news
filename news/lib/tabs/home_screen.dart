@@ -29,27 +29,30 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Scaffold(
           appBar: AppBar(
-            title: Text( selectedCatogry!=null?selectedCatogry!.name:selectedDrawer==OncategorieSelected.categories? 'News App':'setting'),
+            title: const Text('News App'),
           ),
           drawer: HomeDrawer(
             onTap: onDrawerItemPraesed,
           ),
-          body:selectedCatogry!=null? CategoryDetalis(categoryId: selectedCatogry!.id) : selectedDrawer == OncategorieSelected.categories
-              ? CategoryItem(oncategorieSelected:onCategorieSelected ,)
-              : const Settings(),
+          body: selectedCatogry != null
+              ? CategoryDetalis(categoryId: selectedCatogry!.id)
+              : selectedDrawer == OncategorieSelected.categories
+                  ? CategoryItem(
+                      onSelcetedCategory: onSelcetedCategory,
+                    )
+                  : const Settings(),
         ));
   }
 
   void onDrawerItemPraesed(OncategorieSelected item) {
     selectedDrawer = item;
-    selectedCatogry=null;
+    selectedCatogry = null;
     setState(() {});
     Navigator.of(context).pop();
   }
-  void onCategorieSelected(CategoryModel category){
-selectedCatogry=category;
-setState(() {
-  
-});
+
+  void onSelcetedCategory(CategoryModel category) {
+    selectedCatogry = category;
+    setState(() {});
   }
 }

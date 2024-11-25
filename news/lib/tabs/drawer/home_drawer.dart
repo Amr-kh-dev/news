@@ -30,7 +30,7 @@ class HomeDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     GestureDetector(
-                      onTap: ()=>onTap(OncategorieSelected.categories),
+                      onTap: () => onTap(OncategorieSelected.categories),
                       child: Row(
                         children: [
                           const Icon(Icons.menu),
@@ -48,7 +48,7 @@ class HomeDrawer extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: ()=> onTap(OncategorieSelected.settings),
+                      onTap: () => onTap(OncategorieSelected.settings),
                       child: Row(
                         children: [
                           const Icon(Icons.settings),
