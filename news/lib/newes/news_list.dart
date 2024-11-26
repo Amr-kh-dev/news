@@ -14,9 +14,9 @@ class NewsList extends StatelessWidget {
       future: ApiServies.getNews(sourceId),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return LodeingIndecator();
+          return const LodeingIndecator();
         } else if (snapshot.hasError || snapshot.data?.status != 'ok') {
-          return ErroIndecator();
+          return const ErroIndecator();
         } else {
           final newsList = snapshot.data?.articles ?? [];
           return ListView.builder(
