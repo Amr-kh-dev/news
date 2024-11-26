@@ -24,8 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: const BoxDecoration(
           color: AppTheme.wihte,
           image: DecorationImage(
-              image: AssetImage('news/assets/image/_118109970_livreal.png'),
-              fit: BoxFit.fill),
+              image: AssetImage('assets/image/pattern.png'), fit: BoxFit.fill),
         ),
         child: Scaffold(
           appBar: AppBar(

@@ -1,11 +1,14 @@
 // import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news/app_theme.dart';
+import 'package:news/models/news_respons/news_respons/news.dart';
+import 'package:timeago/timeago.dart' as timeago;
 // import 'package:timeago/timeago.dart' as timeago;
 
 class NewsItem extends StatelessWidget {
-  NewsItem({super.key});
+  NewsItem(this.news, {super.key});
   final fifteenAgo = DateTime.now().subtract(const Duration(minutes: 15));
+  final News news;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,13 +18,13 @@ class NewsItem extends StatelessWidget {
         children: [
           ClipRRect(
               borderRadius: BorderRadius.circular(5),
-              child: Image.network(
+              child: Image.network(news.urlToImage ??
                   'https://www.coalitionrc.com/wp-content/uploads/2017/01/placeholder.jpg')),
           const SizedBox(
             height: 4,
           ),
           Text(
-            'BBC News',
+            news.source?.name ?? '',
             style: Theme.of(context)
                 .textTheme
                 .titleSmall
@@ -31,7 +34,7 @@ class NewsItem extends StatelessWidget {
             height: 4,
           ),
           Text(
-            'Why are football is biggest clubs starting a new tournament?',
+            news.title ?? '',
             style: Theme.of(context)
                 .textTheme
                 .titleSmall
@@ -41,8 +44,9 @@ class NewsItem extends StatelessWidget {
             height: 4,
           ),
           const Align(
-              alignment: AlignmentDirectional.centerEnd,
-              child: Text('15 munits'))
+            alignment: AlignmentDirectional.centerEnd,
+            child: Text(''),
+          )
         ],
       ),
     );
