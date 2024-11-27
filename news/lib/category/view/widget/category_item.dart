@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news/app_theme.dart';
-import 'package:news/models/category_model.dart';
-import 'package:news/tabs/category/item_card.dart';
+import 'package:news/shared/app_theme.dart';
+import 'package:news/category/view/widget/item_card.dart';
+import 'package:news/category/data/models/category_model.dart';
 
 class CategoryItem extends StatelessWidget {
   List<CategoryModel> items = [

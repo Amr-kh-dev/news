@@ -1,12 +1,13 @@
 // import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news/app_theme.dart';
-import 'package:news/models/news_respons/news_respons/news.dart';
-// import 'package:timeago/timeago.dart' as timeago;
+import 'package:news/news/data/model/news.dart';
+import 'package:news/shared/app_theme.dart';
+
+import 'package:timeago/timeago.dart' as timeago;
 
 class NewsItem extends StatelessWidget {
   NewsItem(this.news, {super.key});
-  final fifteenAgo = DateTime.now().subtract(const Duration(minutes: 15));
+
   final News news;
   @override
   Widget build(BuildContext context) {

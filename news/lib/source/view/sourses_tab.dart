@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:news/models/suroces_respons/source.dart';
-import 'package:news/newes/news_list.dart';
-import 'package:news/tabs/tab_item.dart';
+import 'package:news/source/data/model/source.dart';
+import 'package:news/news/view/widgets/news_list.dart';
+import 'package:news/source/view/tab_item.dart';
 
 class SourcesTab extends StatefulWidget {
   SourcesTab(
@@ -25,6 +25,7 @@ class _SourcesTabState extends State<SourcesTab> {
           length: widget.sources.length,
           child: TabBar(
               onTap: (index) {
+                if (index == selectedsource) return;
                 selectedsource = index;
                 setState(() {});
               },

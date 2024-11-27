@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news/app_theme.dart';
-import 'package:news/tabs/category/category_detalis.dart';
-import 'package:news/tabs/home_screen.dart';
+import 'package:news/category/view/widget/category_detalis.dart';
+import 'package:news/shared/app_theme.dart';
+import 'package:news/home/view/screens/home_screen.dart';
 
 void main() {
   runApp(const newsApp());
