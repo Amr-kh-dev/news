@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'package:news/api/api_constaens.dart';
+import 'package:news/source/data/data_source/source_data_source.dart';
 import 'package:news/source/data/model/source.dart';
 import 'package:news/source/data/model/suroces_respons.dart';
 import 'package:http/http.dart' as http;
 
-class SourceAPIDataSource {
+class SourceAPIDataSource extends SourceDataSource {
+  @override
   Future<List<Source>> getSources(String categoryId) async {
     final uri = Uri.https(ApiConstaens.baseURL, ApiConstaens.sourcEndPoint,
         {'apiKey': ApiConstaens.apiKey, 'category': categoryId});

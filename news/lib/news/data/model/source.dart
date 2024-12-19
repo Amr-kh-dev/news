@@ -1,13 +1,11 @@
-class Source {
-	String? id;
-	String? name;
+class Sources {
+  String? id;
+  String? name;
 
-	Source({this.id, this.name});
+  Sources({this.id, this.name});
 
-	factory Source.fromJson(Map<String, dynamic> json) => Source(
-				id: json['id'] as String?,
-				name: json['name'] as String?,
-			);
-
-	
+  factory Sources.fromJson(Map<String, dynamic> json) => Sources(
+        id: json['id'] as String?,
+        name: json['name'] as String?,
+      );
 }
