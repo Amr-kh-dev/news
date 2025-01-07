@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/category/data/models/category_model.dart';
+import 'package:news/category/view/widget/article_detalis.dart';
 
 class ItemCard extends StatelessWidget {
   CategoryModel model;
